@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> STEP 2 // PET </title>
+{% endblock %}
+
+{% block body %}
+
+
+<div class="container text-center mt-5">
+    <div class="row">
+        <div col>
+
+            <h1 class="kanit" style="font-size: 5em">WHAT IS YOUR PET'S NAME?</h1>
+            <p class="inter text-muted">STEP 2</p>
+
+
+
+            <form action="/edit/pet" method="POST">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="pet" id="pet" placeholder="PREVIOUS ANSWER: {{ user.step2 }}">
+                  <small id="petHelp" class="form-text text-muted">Enter your new pet's name and it will automatically update.</small>
+                </div>
+               
+                <button type="submit" class="btn btn-dark inter">SUBMIT</button>
+              </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base-login.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block head %}
+<title> sheesh</title>
+{% endblock %}
+
+{% block body %}
+
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-lg-6 col-md-6 col-sm-12 ">
+            <div class="card shadow-lg p-3 mb-5">
+                <h5 class="card-title text-center inter">sign up</h5>
+                <div class="card-body">
+                  <form class="inter" action="/register" method="POST">
+                        {{ form.hidden_tag() }}
+      
+                        {{ wtf.form_field(form.form_username)}}
+                        <br />
+                        {{ wtf.form_field(form.form_password)}}
+                        <br />
+                        <input class="btn btn-primary inter" type="submit" value="sign up">
+                        <a class="btn btn-dark inter" href="{{ url_for('login')}}" > go to log in</a>
+                  </form>
+                </div>
+              </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+{% endblock %}

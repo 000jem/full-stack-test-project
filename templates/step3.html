@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> STEP 3 // DREAM JOB </title>
+{% endblock %}
+
+{% block body %}
+
+<div class="container text-center mt-5">
+    <div class="row">
+        <div col>
+
+            <h1 class="kanit" style="font-size: 5em">WHAT IS YOUR DREAM JOB?</h1>
+            <p class="inter text-muted">STEP 3</p>
+
+
+
+            <form action="/edit/dream" method="POST">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="dream" id="dream" placeholder="PREVIOUS ANSWER: {{ user.step3 }}">
+                  <small id="petHelp" class="form-text text-muted">Enter your new dream job and it will automatically update.</small>
+                </div>
+               
+                <button type="submit" class="btn btn-dark inter">SUBMIT</button>
+              </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
